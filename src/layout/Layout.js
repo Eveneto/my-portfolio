@@ -36,7 +36,7 @@ const Layout = ({ children, extraWrapClass }) => {
     <Fragment>
       <div className="container-page ">
         {/* Preloader */}
-        <PreLoader />
+        {/* <PreLoader /> */}
         {/* Header */}
         <Header />
         {/* Wrapper */}

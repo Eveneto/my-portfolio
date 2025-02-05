@@ -14,7 +14,7 @@ const Index = () => {
         <div className="container">
           {/* Hero Started */}
           <div className="hero-started">
-            <div
+            {/* <div
               className="slide"
             >
               <img src="assets/images/profile.png" alt="" />
@@ -88,36 +88,24 @@ const Index = () => {
                   />
                 </svg>
               </span>
-            </div>
+            </div> */}
             <div className="content">
               <div className="titles">
-                <div
-                  className="subtitle"
-                >
-                  UI UX DESIGNER
-                </div>
-                <h2
-                  className="title"
-                >
-                  Federico Ober
-                </h2>
+                <div className="subtitle">Front-end Web Developer</div>
+                <h2 className="title">Everaldo Neto</h2>
               </div>
-              <div
-                className="description"
-              >
+              <div className="description">
                 <p>
-                  I am UI/UX Designer based in New York and enjoy playing
-                  with colors. I love travelling, photography &amp; music.
+                  Passionate Front-end Developer from Recife, Brazil, with over two years of 
+                  experience in designing and building dynamic, scalable, and responsive web applications. 
+                  Proficient in XAMPP, PHP, Python, and modern front-end technologies.
                 </p>
                 <div className="social-links">
-                  <a target="_blank" rel="noreferrer" href="#">
-                    <i aria-hidden="true" className="fab fa-twitter" />
+                  <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/everaldo-neto">
+                    <i aria-hidden="true" className="fab fa-linkedin" />
                   </a>
-                  <a target="_blank" rel="noreferrer" href="#">
-                    <i aria-hidden="true" className="fab fa-dribbble" />
-                  </a>
-                  <a target="_blank" rel="noreferrer" href="#">
-                    <i aria-hidden="true" className="fab fa-behance" />
+                  <a target="_blank" rel="noreferrer" href="https://github.com/Eveneto">
+                    <i aria-hidden="true" className="fab fa-github" />
                   </a>
                 </div>
               </div>
@@ -125,16 +113,17 @@ const Index = () => {
             <div className="info-list">
               <ul>
                 <li>
-                  Born in <strong>NewYork</strong>
+                  Based in <strong>Recife, Brazil</strong>
                 </li>
                 <li>
-                  Experience <strong>7+ Years</strong>
+                  Experience <strong>2+ Years</strong>
                 </li>
                 <li>
-                  Date of Birth <strong>27 June 1992</strong>
+                  Education <strong>Bachelor’s in Information Systems (UFRPE)</strong>
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </section>
@@ -143,95 +132,79 @@ const Index = () => {
         id="about-section"
       >
         <div className="container">
-          {/* Section Heading */}
-          <div className="m-titles">
-            <h2
-              className="m-title"
-            >
-              About Me
-            </h2>
-          </div>
-          <div className="row row-custom">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-right">
-              {/* Section numbers */}
-              <div className="numbers-items">
-                <div
-                  className="numbers-item"
-                >
-                  <div className="icon">
-                    <i aria-hidden="true" className="far fa-check-circle" />
+            {/* Section Heading */}
+            <div className="m-titles">
+              <h2 className="m-title">About Me</h2>
+            </div>
+
+            <div className="row row-custom">
+              <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-right">
+                {/* Section numbers */}
+                <div className="numbers-items">
+                  <div className="numbers-item">
+                    <div className="icon">
+                      <i aria-hidden="true" className="far fa-check-circle" />
+                    </div>
+                    <div className="num">3</div>
+                    <div className="title">
+                      Completed <br />
+                      Projects
+                    </div>
                   </div>
-                  <div className="num">124</div>
-                  <div className="title">
-                    Completed <br />
-                    Project
+                  <div className="numbers-item">
+                    <div className="icon">
+                      <i aria-hidden="true" className="far fa-smile-beam" />
+                    </div>
+                    <div className="num">N/A</div>
+                    <div className="title">
+                      Happy <br />
+                      Clients
+                    </div>
                   </div>
-                </div>
-                <div
-                  className="numbers-item"
-                >
-                  <div className="icon">
-                    <i aria-hidden="true" className="far fa-smile-beam" />
-                  </div>
-                  <div className="num">65</div>
-                  <div className="title">
-                    Happy <br />
-                    Clients
-                  </div>
-                </div>
-                <div
-                  className="numbers-item"
-                >
-                  <div className="icon">
-                    <i aria-hidden="true" className="far fa-gem" />
-                  </div>
-                  <div className="num">18</div>
-                  <div className="title">
-                    Awards <br />
-                    Won
+                  <div className="numbers-item">
+                    <div className="icon">
+                      <i aria-hidden="true" className="far fa-gem" />
+                    </div>
+                    <div className="num">N/A</div>
+                    <div className="title">
+                      Awards <br />
+                      Won
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
-              {/* Section Profile */}
-              <div className="profile-box">
-                <div
-                  className="text"
-                >
-                  <p>
-                    My name is Federico Ober. I have been studying UI UX Design
-                    since October 2020. I like creating a cool design project.
-                  </p>
-                  <p>
-                    Donec imperdiet risus at tortor consequat maximus et eget
-                    magna. Cras ornare sagittis augue, id sollicitudin justo
-                    tristique ut. Nullam ex enim, euismod vel bibendum ultrices,
-                    fringilla vel eros. Donec euismod leo lectus, et euismod
-                    metus euismod sed. Quisque quis suscipit ipsum, at
-                    pellentesque velit. Duis a congue sem.
-                  </p>
-                  <p>
-                    In sed dolor ut ligula malesuada sollicitudin. Morbi iaculis
-                    convallis arcu, nec maximus tellus sodales in. Curabitur
-                    blandit enim at nisl lobortis, non pretium enim hendrer
-                  </p>
-                  <a
-                    href="#contact-section"
-                    className="btn"
-                  >
-                    <span>Contact Me</span>
-                  </a>
-                  <div
-                    className="signature"
-                  >
-                    <img src="assets/images/signature.png" alt="" />
+
+              <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
+                {/* Section Profile */}
+                <div className="profile-box">
+                  <div className="text">
+                    <p>
+                      My name is Everaldo Neto. I am a Front-end Web Developer from Recife, Brazil, 
+                      with over two years of experience in designing and building dynamic, scalable, 
+                      and responsive web applications.
+                    </p>
+                    <p>
+                      I am proficient in XAMPP, PHP, Python, and cutting-edge front-end technologies 
+                      like React and Bootstrap. I enjoy working with agile methodologies such as Scrum 
+                      and am passionate about contributing to innovative projects.
+                    </p>
+                    <p>
+                      I'm an advanced English speaker and open to relocation abroad. I’m always eager 
+                      to learn new technologies and improve my skills in both front-end and back-end development.
+                    </p>
+                    <a href="#contact-section" className="btn">
+                      <span>Contact Me</span>
+                    </a>
+                    {/* Optional Signature */}
+                    {/* <div className="signature">
+                      <img src="assets/images/signature.png" alt="signature" />
+                    </div> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
       </section>
       <section
         className="section section-parallax section-parallax-2"
