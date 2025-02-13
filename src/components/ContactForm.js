@@ -51,7 +51,7 @@ const ContactForm = () => {
                 <div className="icon">
                   <i aria-hidden="true" className="fas fa-phone" />
                 </div>
-                <div className="num">+1 023-456-7800</div>
+                <div className="num">+55 (81) 99892-7976</div>
               </div>
               <div
                 className="numbers-item"
@@ -59,16 +59,16 @@ const ContactForm = () => {
                 <div className="icon">
                   <i aria-hidden="true" className="fas fa-at" />
                 </div>
-                <div className="num">hi@ober.com</div>
+                <div className="num">everaldoneto201@gmail.com</div>
               </div>
-              <div
+              {/* <div
                 className="numbers-item"
               >
                 <div className="icon">
                   <i aria-hidden="true" className="fas fa-location-arrow" />
                 </div>
                 <div className="num">43rd Street River Point NY 1023</div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">

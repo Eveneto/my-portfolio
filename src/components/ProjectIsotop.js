@@ -1,257 +1,138 @@
 import Isotope from "isotope-layout";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
+
 const ProjectIsotop = () => {
-  // Isotope
-  const isotope = useRef();
+  const isotope = useRef(null);
   const [filterKey, setFilterKey] = useState("*");
+
   useEffect(() => {
-    setTimeout(() => {
-      isotope.current = new Isotope(".works-items", {
-        itemSelector: ".works-col",
-        //    layoutMode: "fitRows",
-        percentPosition: true,
-        masonry: {
-          columnWidth: ".works-col",
-        },
-        animationOptions: {
-          duration: 750,
-          easing: "linear",
-          queue: false,
-        },
-      });
-    }, 1000);
-    //     return () => isotope.current.destroy();
+    isotope.current = new Isotope(".works-items", {
+      itemSelector: ".works-col",
+      layoutMode: "masonry",
+      percentPosition: true,
+      masonry: { columnWidth: ".works-col" },
+    });
+
+    return () => isotope.current?.destroy();
   }, []);
+
   useEffect(() => {
     if (isotope.current) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: `*` })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
+      isotope.current.arrange({ filter: filterKey === "*" ? "*" : `.${filterKey}` });
     }
   }, [filterKey]);
-  const handleFilterKeyChange = (key) => () => {
-    setFilterKey(key);
-  };
+
+  const handleFilterKeyChange = (key) => () => setFilterKey(key);
   const activeBtn = (value) => (value === filterKey ? "active" : "");
+
   return (
     <Fragment>
       <div className="works-box">
-        <div
-          className="filter-links"
-        >
-          <a
-            className={`c-pointer ${activeBtn("*")}`}
-            onClick={handleFilterKeyChange("*")}
-            data-href=".works-col"
-          >
-            All
-          </a>
-          <a
-            className={`c-pointer ${activeBtn("sorting-ui-ux-design")}`}
-            onClick={handleFilterKeyChange("sorting-ui-ux-design")}
-            data-href=".sorting-ui-ux-design"
-          >
-            UI UX Design
-          </a>
-          <a
-            className={`c-pointer ${activeBtn("sorting-photo")}`}
-            onClick={handleFilterKeyChange("sorting-photo")}
-            data-href=".sorting-photo"
-          >
-            Photography
-          </a>
-          <a
-            className={`c-pointer ${activeBtn("sorting-development")}`}
-            onClick={handleFilterKeyChange("sorting-development")}
-            data-href=".sorting-development"
-          >
-            Development
-          </a>
-          <a
-            className={`c-pointer ${activeBtn("sorting-branding")}`}
-            onClick={handleFilterKeyChange("sorting-branding")}
-            data-href=".sorting-branding"
-          >
-            Branding
-          </a>
+        <div className="filter-links">
+          <button className={`c-pointer ${activeBtn("*")}`} onClick={handleFilterKeyChange("*")}>All</button>
+          <button className={`c-pointer ${activeBtn("sorting-health")}`} onClick={handleFilterKeyChange("sorting-health")}>Health</button>
+          <button className={`c-pointer ${activeBtn("sorting-congress")}`} onClick={handleFilterKeyChange("sorting-congress")}>Congress</button>
+          <button className={`c-pointer ${activeBtn("sorting-food")}`} onClick={handleFilterKeyChange("sorting-food")}>Food</button>
+          <button className={`c-pointer ${activeBtn("sorting-machinery")}`} onClick={handleFilterKeyChange("sorting-machinery")}>Machinery</button>
+          <button className={`c-pointer ${activeBtn("sorting-winery")}`} onClick={handleFilterKeyChange("sorting-winery")}>Winery</button>
         </div>
+
         <div className="works-items works-list-items row">
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-photo ">
+          {/* Efycard */}
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-health">
             <div className="works-item">
-              <Link href="/work-single">
+              <Link href="https://efycard.com.br" target="_blank" rel="noopener noreferrer">
                 <a>
-                  <span
-                    className="image"
-                  >
+                  <span className="image">
                     <span className="img">
-                      <img src="assets/images/work4.jpg" alt="Zorro" />
+                      <img src="assets/images/efycard.jpg" alt="Efycard" />
                       <span className="overlay" />
                     </span>
                   </span>
                   <span className="desc">
-                    <span
-                      className="name"
-                    >
-                      Zorro
-                    </span>
-                    <span
-                      className="category"
-                    >
-                      Branding
-                      <br />
-                      Photography
-                    </span>
+                    <span className="name">Efycard</span>
+                    <span className="category">Health</span>
                   </span>
                 </a>
               </Link>
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-ui-ux-design ">
+
+          {/* Congresso de Cardiologia de Pernambuco */}
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-congress">
             <div className="works-item">
-              <Link href="/work-single">
+              <Link href="https://congressodecardiologia.com.br" target="_blank" rel="noopener noreferrer">
                 <a>
-                  <span
-                    className="image"
-                  >
+                  <span className="image">
                     <span className="img">
-                      <img src="assets/images/work2.jpg" alt="Gooir" />
+                      <img src="assets/images/sbcpe.jpg" alt="Congresso de Cardiologia de Pernambuco" />
                       <span className="overlay" />
                     </span>
                   </span>
                   <span className="desc">
-                    <span
-                      className="name"
-                    >
-                      Gooir
-                    </span>
-                    <span
-                      className="category"
-                    >
-                      Branding
-                      <br />
-                      UI UX Design
-                    </span>
+                    <span className="name">Congresso de Cardiologia de Pernambuco</span>
+                    <span className="category">Congress</span>
                   </span>
                 </a>
               </Link>
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-development sorting-ui-ux-design ">
+
+          {/* Boku’s */}
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-food">
             <div className="works-item">
-              <Link href="/work-single">
+              <Link href="https://bokus.com.br" target="_blank" rel="noopener noreferrer">
                 <a>
-                  <span
-                    className="image"
-                  >
+                  <span className="image">
                     <span className="img">
-                      <img src="assets/images/work7.jpg" alt="Explore" />
+                      <img src="assets/images/bokus.png" alt="Boku’s" />
                       <span className="overlay" />
                     </span>
                   </span>
                   <span className="desc">
-                    <span
-                      className="name"
-                    >
-                      Explore
-                    </span>
-                    <span
-                      className="category"
-                    >
-                      Development
-                      <br />
-                      UI UX Design
-                    </span>
+                    <span className="name">Boku’s</span>
+                    <span className="category">Food</span>
                   </span>
                 </a>
               </Link>
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-photo ">
+
+          {/* FW Máquinas */}
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-machinery">
             <div className="works-item">
-              <Link href="/work-single">
+              <Link href="https://fwmaquinas.com.br" target="_blank" rel="noopener noreferrer">
                 <a>
-                  <span
-                    className="image"
-                  >
+                  <span className="image">
                     <span className="img">
-                      <img src="assets/images/work1.jpg" alt="Mozar" />
+                      <img src="assets/images/fwmaquinas.jpg" alt="FW Máquinas" />
                       <span className="overlay" />
                     </span>
                   </span>
                   <span className="desc">
-                    <span
-                      className="name"
-                    >
-                      Mozar
-                    </span>
-                    <span
-                      className="category"
-                    >
-                      Branding
-                      <br />
-                      Photography
-                    </span>
+                    <span className="name">FW Máquinas</span>
+                    <span className="category">Machinery</span>
                   </span>
                 </a>
               </Link>
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-photo ">
+
+          {/* Rio Sol */}
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-winery">
             <div className="works-item">
-              <Link href="/work-single">
+              <Link href="https://vinhosriosol.com.br" target="_blank" rel="noopener noreferrer">
                 <a>
-                  <span
-                    className="image"
-                  >
+                  <span className="image">
                     <span className="img">
-                      <img src="assets/images/single8.jpg" alt="Stay Fit" />
+                      <img src="assets/images/riosol.jpg" alt="Rio Sol" />
                       <span className="overlay" />
                     </span>
                   </span>
                   <span className="desc">
-                    <span
-                      className="name"
-                    >
-                      Stay Fit
-                    </span>
-                    <span
-                      className="category"
-                    >
-                      Development
-                      <br />
-                      UI UX Design
-                    </span>
-                  </span>
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-photo ">
-            <div className="works-item">
-              <Link href="/work-single">
-                <a>
-                  <span
-                    className="image"
-                  >
-                    <span className="img">
-                      <img src="assets/images/single6.jpg" alt="Kana" />
-                      <span className="overlay" />
-                    </span>
-                  </span>
-                  <span className="desc">
-                    <span
-                      className="name"
-                    >
-                      Kana
-                    </span>
-                    <span
-                      className="category"
-                    >
-                      Development
-                      <br />
-                      Photography
-                    </span>
+                    <span className="name">Rio Sol</span>
+                    <span className="category">Winery</span>
                   </span>
                 </a>
               </Link>
@@ -262,4 +143,5 @@ const ProjectIsotop = () => {
     </Fragment>
   );
 };
+
 export default ProjectIsotop;

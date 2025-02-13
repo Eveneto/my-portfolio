@@ -145,7 +145,7 @@ const Index = () => {
                     <div className="icon">
                       <i aria-hidden="true" className="far fa-check-circle" />
                     </div>
-                    <div className="num">3</div>
+                    <div className="num">11</div>
                     <div className="title">
                       Completed <br />
                       Projects
@@ -155,13 +155,13 @@ const Index = () => {
                     <div className="icon">
                       <i aria-hidden="true" className="far fa-smile-beam" />
                     </div>
-                    <div className="num">N/A</div>
+                    <div className="num">5</div>
                     <div className="title">
                       Happy <br />
                       Clients
                     </div>
                   </div>
-                  <div className="numbers-item">
+                  {/* <div className="numbers-item">
                     <div className="icon">
                       <i aria-hidden="true" className="far fa-gem" />
                     </div>
@@ -170,7 +170,7 @@ const Index = () => {
                       Awards <br />
                       Won
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -213,347 +213,142 @@ const Index = () => {
         <div className="container">
           {/* Section Heading */}
           <div className="m-titles">
-            <h2
-              className="m-title"
-            >
-              My Resume
-            </h2>
+            <h2 className="m-title">My Resume</h2>
           </div>
           <div className="row row-custom">
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
             <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
-              {/* Description */}
-              <div
-                className="text"
-              >
+              {/* About Me */}
+              <div className="text">
                 <p>
-                  Talented UX designer with 7+ years of experience, seeking to
-                  elevate UI/UX at ABC, Inc. As Lead UI/UX Head completed
-                  project before dead line. ittis augue, id sollicitudin justo
-                  tristique ut. Nullam ex enim, euismod vel bibendum ultrices,
-                  fringilla vel eros. Donec euism od leo um, at pellentesque
-                  velituis a congue sem.
+                  Passionate Front-end Web Developer from Recife, Brazil, with over two years 
+                  of experience in designing and building dynamic, scalable, and responsive web 
+                  applications. Proficient in XAMPP, PHP, Python, and cutting-edge front-end 
+                  technologies. Advanced English speaker with experience in Scrum methodologies, 
+                  eager to contribute to innovative projects, and available for relocation abroad.
                 </p>
               </div>
+
               {/* Skills */}
               <div className="skills-items">
-                <div
-                  className="p-title"
-                >
-                  SKILLS
-                </div>
-                <div
-                  className="skills-item"
-                >
-                  <div className="name">Photoshop</div>
-                  <div className="dots dots-90">
-                    <div className="dots-row">
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
+                <div className="p-title">SKILLS</div>
+                {[
+                  { name: "PHP", value: 90 },
+                  { name: "Python", value: 80 },
+                  { name: "HTML", value: 95 },
+                  { name: "CSS", value: 90 },
+                  { name: "JavaScript", value: 85 },
+                  { name: "Bootstrap", value: 80 },
+                  { name: "React", value: 70 },
+                  { name: "MySQL", value: 75 },
+                ].map((skill, index) => (
+                  <div key={index} className="skills-item">
+                    <div className="name">{skill.name}</div>
+                    <div className={`dots dots-${skill.value}`}>
+                      <div className="dots-row">
+                        {Array.from({ length: 10 }).map((_, i) => (
+                          <div key={i} className="dot" />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="value">
+                      <span className="num">{skill.value}%</span>
                     </div>
                   </div>
-                  <div className="value">
-                    <span className="num">90%</span>
-                  </div>
-                </div>
-                <div
-                  className="skills-item"
-                >
-                  <div className="name">WordPress</div>
-                  <div className="dots dots-60">
-                    <div className="dots-row">
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                    </div>
-                  </div>
-                  <div className="value">
-                    <span className="num">60%</span>
-                  </div>
-                </div>
-                <div
-                  className="skills-item"
-                >
-                  <div className="name">HTML</div>
-                  <div className="dots dots-80">
-                    <div className="dots-row">
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                    </div>
-                  </div>
-                  <div className="value">
-                    <span className="num">80%</span>
-                  </div>
-                </div>
-                <div
-                  className="skills-item"
-                >
-                  <div className="name">Java</div>
-                  <div className="dots dots-50">
-                    <div className="dots-row">
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                    </div>
-                  </div>
-                  <div className="value">
-                    <span className="num">50%</span>
-                  </div>
-                </div>
-                <div
-                  className="skills-item"
-                >
-                  <div className="name">jQuery</div>
-                  <div className="dots dots-70">
-                    <div className="dots-row">
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                      <div className="dot" />
-                    </div>
-                  </div>
-                  <div className="value">
-                    <span className="num">70%</span>
-                  </div>
-                </div>
+                ))}
               </div>
+
               {/* Services */}
-              <div
-                className="p-title"
-              >
-                SERVICES
-              </div>
+              <div className="p-title">SERVICES</div>
               <div className="services-items">
-                <div className="services-col">
-                  <div
-                    className="services-item"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="fab fa-chrome" />
+                {[
+                  { icon: "fab fa-chrome", title: "Web Development", desc: "Creating scalable and responsive websites with modern technologies." },
+                  { icon: "fas fa-server", title: "Back-end Development", desc: "Building secure and efficient APIs using PHP, Python, and Node.js." },
+                  { icon: "fas fa-database", title: "Database Management", desc: "Designing and optimizing relational and non-relational databases." },
+                  { icon: "fas fa-code", title: "Automation & DevOps", desc: "Automating workflows with Docker, Git, and CI/CD pipelines." },
+                ].map((service, index) => (
+                  <div key={index} className="services-col">
+                    <div className="services-item">
+                      <div className="icon">
+                        <i aria-hidden="true" className={service.icon} />
+                      </div>
+                      <div className="title">{service.title}</div>
+                      <div className="text">
+                        <p>{service.desc}</p>
+                      </div>
+                      <a href="#contact-section" className="lnk">
+                        Order now
+                      </a>
                     </div>
-                    <div className="title">Web development</div>
-                    <div className="text">
-                      <p>
-                        Modern and mobile-ready website that will help you reach
-                        all of your marketing.
-                      </p>
-                    </div>
-                    <a href="#contact-section" className="lnk">
-                      order now
-                    </a>
                   </div>
-                </div>
-                <div className="services-col">
-                  <div
-                    className="services-item"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="fab fa-soundcloud" />
-                    </div>
-                    <div className="title">Music writing</div>
-                    <div className="text">
-                      <p>
-                        Music copying, writing, creating, transcription and
-                        composition services.
-                      </p>
-                    </div>
-                    <a href="#contact-section" className="lnk">
-                      order now
-                    </a>
-                  </div>
-                </div>
-                <div className="services-col">
-                  <div
-                    className="services-item"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="fab fa-adversal" />
-                    </div>
-                    <div className="title">Advetising</div>
-                    <div className="text">
-                      <p>
-                        Advertising services include television, radio, print,
-                        mail, and web apps.
-                      </p>
-                    </div>
-                    <a href="#contact-section" className="lnk">
-                      order now
-                    </a>
-                  </div>
-                </div>
-                <div className="services-col">
-                  <div
-                    className="services-item"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="fas fa-gamepad" />
-                    </div>
-                    <div className="title">Game Development</div>
-                    <div className="text">
-                      <p>
-                        Developing memorable and unique mobile android, ios and
-                        video games.
-                      </p>
-                    </div>
-                    <a href="#contact-section" className="lnk">
-                      order now
-                    </a>
-                  </div>
-                </div>
+                ))}
               </div>
-              {/* History */}
+
+              {/* Education */}
               <div className="history-left">
                 <div className="history-items">
-                  <div
-                    className="p-title"
-                  >
-                    EDUCATION
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2010 - 2012</div>
-                    <div className="name">Master in Graphic</div>
-                    <div className="subname">New York University</div>
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2006 - 2009</div>
-                    <div className="name">Bachelors of FineArt</div>
-                    <div className="subname">New York University</div>
+                  <div className="p-title">EDUCATION</div>
+                  <div className="history-item">
+                    <div className="date">2018 - 2025</div>
+                    <div className="name">Bachelor’s in Information Systems</div>
+                    <div className="subname">Federal Rural University of Pernambuco (UFRPE)</div>
                   </div>
                 </div>
+
+                {/* Projects */}
                 <div className="history-items">
-                  <div
-                    className="p-title"
-                  >
-                    AWARDS
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2016 - awwwards</div>
-                    <div className="name">Site of the Day</div>
+                  <div className="p-title">PROJECTS</div>
+                  <div className="history-item">
+                    <div className="name">LACTOSAFE</div>
                     <div className="text">
                       <p>
-                        Euismod vel bibendum ultrices, fringilla vel eros, donec
-                        euismod leo lectus.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2015 - designnominees</div>
-                    <div className="name">Site of the Week</div>
-                    <div className="text">
-                      <p>
-                        Euismod vel bibendum ultrices, fringilla vel eros, donec
-                        euismod leo lectus.
+                        Designed and implemented a back-end system to assist people with lactose 
+                        intolerance. Developed a Python-based API with user authentication, 
+                        recipe search, and database integration.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Experience */}
               <div className="history-right">
                 <div className="history-items">
-                  <div
-                    className="p-title"
-                  >
-                    EXPERIENCE
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2014 - Present</div>
-                    <div className="name">Soft Tech Inc.</div>
-                    <div className="subname">UI Head &amp; Manager</div>
+                  <div className="p-title">EXPERIENCE</div>
+                  <div className="history-item">
+                    <div className="date">August 2022 - Present</div>
+                    <div className="name">Ser Digital</div>
+                    <div className="subname">Front-end Web Developer</div>
                     <div className="text">
                       <p>
-                        Euismod vel bibendum ultrices, fringilla vel eros, donec
-                        euismod leo lectus.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2010 - 2014</div>
-                    <div className="name">Kana Design Studio</div>
-                    <div className="subname">UI / UX Specialist</div>
-                    <div className="text">
-                      <p>
-                        Euismod vel bibendum ultrices, fringilla vel eros, donec
-                        euismod leo lectus.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="history-item"
-                  >
-                    <div className="date">2009 - 2010</div>
-                    <div className="name">Paperart</div>
-                    <div className="subname">Graphic Designer</div>
-                    <div className="text">
-                      <p>
-                        Euismod vel bibendum ultrices, fringilla vel eros, donec
-                        euismod leo lectus.
+                        - Designed and optimized scalable web applications using the XAMPP stack. <br />
+                        - Configured Apache servers and managed MySQL/PostgreSQL databases. <br />
+                        - Built responsive, user-centered interfaces with HTML, CSS, JavaScript, and Bootstrap. <br />
+                        - Integrated APIs and implemented security measures for robust applications. <br />
+                        - Automated workflows and developed back-end features using Python. <br />
+                        - Applied Scrum methodologies to manage development processes and ensure project delivery. <br />
+                        - Collaborated with cross-functional teams in agile environments to deliver high-performance solutions.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div className="clear" />
               {/* Button CV */}
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://bslthemes.site/ober/wp-content/uploads/2021/12/Jacky-Smith-Resume.pdf"
+                href="https://github.com/Eveneto"
                 className="btn"
               >
-                <span>Download CV</span>
+                <span>View GitHub</span>
               </a>
             </div>
           </div>
         </div>
       </section>
+
       <section
         className="section section-bg section-parallax section-parallax-5"
         id="works-section"
@@ -583,311 +378,6 @@ const Index = () => {
           </div>
           {/* Works */}
           <ProjectIsotop />
-        </div>
-      </section>
-      <section className="section" id="pricing-section">
-        <div className="container">
-          {/* Section Heading */}
-          <div className="m-titles">
-            <h2
-              className="m-title"
-            >
-              Pricing Plans
-            </h2>
-          </div>
-          <div className="row row-custom">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
-            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
-              {/* Description */}
-              <div
-                className="text"
-              >
-                <p>
-                  Are you interested to work with me ? Here are my price list
-                  for design related work. Lets talk about project !
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* Pricing */}
-          <div className="pricing-items row">
-            <div className="pricing-col col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <div
-                className="pricing-item"
-              >
-                <div className="title">Full Time</div>
-                <div className="subtitle">Available for Full Time</div>
-                <div className="price">$1200</div>
-                <div className="text">
-                  <ul>
-                    <li>Brand Design</li>
-                    <li>Advertising</li>
-                    <li>Web Development</li>
-                    <li>Photography</li>
-                  </ul>
-                </div>
-                <a href="#contact-section" className="btn">
-                  <span>Hire Me</span>
-                </a>
-              </div>
-            </div>
-            <div className="pricing-col col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <div
-                className="pricing-item"
-              >
-                <div className="title">Project Wise</div>
-                <div className="subtitle">Available for Freelancing</div>
-                <div className="price">$400</div>
-                <div className="text">
-                  <ul>
-                    <li>Brand Design</li>
-                    <li>Advertising</li>
-                    <li>Web Development</li>
-                    <li>Photography</li>
-                  </ul>
-                </div>
-                <a href="#contact-section" className="btn">
-                  <span>Hire Me</span>
-                </a>
-              </div>
-            </div>
-            <div className="pricing-col col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <div
-                className="pricing-item"
-              >
-                <div className="title">Hourley</div>
-                <div className="subtitle">Available for Hourley Basis</div>
-                <div className="price">$60</div>
-                <div className="text">
-                  <ul>
-                    <li>Brand Design</li> <li>Advertising</li>
-                    <li>Web Development</li> <li>Photography</li>
-                  </ul>
-                </div>
-                <a href="#contact-section" className="btn">
-                  <span>Hire Me</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section no-padding-top section-parallax section-parallax-4">
-        <div className="container">
-          {/* Testimonials */}
-          <TestimonialSlider />
-        </div>
-      </section>
-      <section className="section section-bg" id="blog-section">
-        <div className="container">
-          {/* Section Heading */}
-          <div className="m-titles">
-            <h2
-              className="m-title"
-            >
-              My Blog
-            </h2>
-          </div>
-          <div className="row row-custom">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
-            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
-              {/* Description */}
-              <div
-                className="text"
-              >
-                <p>
-                  Suspendisse potenti. Sed egestas eros eu libero posuere
-                  ultrices. Nullam ut aliquet felis, sit amet imperdiet felis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Blog */}
-        <div className="blog-items">
-          <div className="archive-item">
-            <div className="image">
-              <Link href="/blog-single">
-                <a>
-                  <img
-                    src="assets/images/blog4.jpg"
-                    alt="Usability Secrets to Create Better User Interfaces"
-                  />
-                </a>
-              </Link>
-            </div>
-            <div className="desc">
-              <div
-                className="category"
-              >
-                UI Design
-                <br />
-                <span>November 28, 2021</span>
-              </div>
-              <h3
-                className="title"
-              >
-                <Link href="/blog-single">
-                  <a>Usability Secrets to Create Better User Interfaces</a>
-                </Link>
-              </h3>
-              <div
-                className="text"
-              >
-                <p>
-                  Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                  mattis. Aliquam vel sem vel velit efficitur malesuada. Donec
-                  arcu lacus, ornare eget…{" "}
-                </p>
-                <div className="readmore">
-                  <Link href="/blog-single">
-                    <a className="lnk">Read more</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="archive-item">
-            <div className="image">
-              <Link href="/blog-single">
-                <a>
-                  <img
-                    src="assets/images/blog3.jpg"
-                    alt="Three Ways To Level Up Your Photography"
-                  />
-                </a>
-              </Link>
-            </div>
-            <div className="desc">
-              <div
-                className="category"
-              >
-                Branding
-                <br />
-                <span>November 28, 2021</span>
-              </div>
-              <h3
-                className="title"
-              >
-                <Link href="/blog-single">
-                  <a>Three Ways To Level Up Your Photography</a>
-                </Link>
-              </h3>
-              <div
-                className="text"
-              >
-                <p>
-                  Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                  mattis. Aliquam vel sem vel velit efficitur malesuada. Donec
-                  arcu lacus, ornare eget…{" "}
-                </p>
-                <div className="readmore">
-                  <Link href="/blog-single">
-                    <a className="lnk">Read more</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="archive-item">
-            <div className="image">
-              <Link href="/blog-single">
-                <a>
-                  <img
-                    src="assets/images/single7.jpg"
-                    alt="10 Useful Tips to Improve Your UI Designs"
-                  />
-                </a>
-              </Link>
-            </div>
-            <div className="desc">
-              <div
-                className="category"
-              >
-                Photography
-                <br />
-                <span>November 28, 2021</span>
-              </div>
-              <h3
-                className="title"
-              >
-                <Link href="/blog-single">
-                  <a>10 Useful Tips to Improve Your UI Designs</a>
-                </Link>
-              </h3>
-              <div
-                className="text"
-              >
-                <p>
-                  Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                  mattis. Aliquam vel sem vel velit efficitur malesuada. Donec
-                  arcu lacus, ornare eget…
-                </p>
-                <div className="readmore">
-                  <Link href="/blog-single">
-                    <a className="lnk">Read more</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="blog-more-link">
-          <Link href="/blog">
-            <a
-              className="btn"
-            >
-              <span>View Blog</span>
-            </a>
-          </Link>
-        </div>
-      </section>
-      <section className="section section-parallax section-parallax-5">
-        <div className="container">
-          {/* Section Heading */}
-          <div className="m-titles">
-            <h2
-              className="m-title"
-            >
-              My Clients
-            </h2>
-          </div>
-          <div className="row row-custom">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
-            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
-              {/* Description */}
-              <div
-                className="text"
-              >
-                <p>
-                  Suspendisse potenti. Sed egestas eros eu libero posuere
-                  ultrices. Nullam ut aliquet felis, sit amet imperdiet felis.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row clients-items">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-center">
-              <div className="clients-item">
-                <img src="assets/images/brand1.png" alt="" />
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-center">
-              <div className="clients-item">
-                <img src="assets/images/brand2.png" alt="" />
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-center">
-              <div className="clients-item">
-                <img src="assets/images/brand3.png" alt="" />
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-center">
-              <div className="clients-item">
-                <img src="assets/images/brand4.png" alt="" />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <ContactForm />
