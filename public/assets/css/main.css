@@ -2323,7 +2323,7 @@ body.light-skin .header.sticky .navbar.default:before {
 }
 
 .contacts-items .numbers-item .num {
-	font-size: 18px;
+	font-size: 15px;
 }
 
 .numbers-item .title {
@@ -2780,8 +2780,8 @@ body.light-skin .header.sticky .navbar.default:before {
 }
 
 .works-item .image img {
-	width: 100%;
-	height: 450px;
+	width: 70%;
+	height: auto;
 	object-fit: cover;
 	transform: scale(1);
 	-webkit-transform: scale(1);
@@ -2844,7 +2844,7 @@ body.light-skin .header.sticky .navbar.default:before {
 .works-items.works-list-items .works-item .desc .name {
 	margin-bottom: 30px;
 	font-family: "Sorts Mill Goudy";
-	font-size: 100px;
+	font-size: 80px;
 	line-height: 1;
 	color: #fff;
 	font-weight: 300;
@@ -5602,6 +5602,15 @@ body.light-skin .profile-box .signature img {
 	body.light-skin .header .cart-btn.active .cart-icon {
 		color: #fff;
 	}
+
+	.slide{
+		display: block !important;
+		visibility: hidden !important;
+	}
+}
+
+.slide{
+	display: none;
 }
 
 body.light-skin .content-sidebar .search-form input.btn_search,

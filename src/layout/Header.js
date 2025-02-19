@@ -103,17 +103,17 @@ const Header = () => {
         <div className="row">
           <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             {/* logo */}
-            <div className="logo">
+            {/* <div className="logo">
               <Link href="/">
                 <a>
                   <img src="assets/images/ober_logo.png" alt="" />
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
             {/* switcher btn */}
-            <a
+            {/* <a
               href="#"
               className={`switcher-btn ${day ? "active" : ""}`}
               onClick={() => setDay(!day)}
@@ -146,7 +146,7 @@ const Header = () => {
                   />
                 </svg>
               </span>
-            </a>
+            </a> */}
             {/* menu btn */}
             <a
             href="#"
@@ -191,7 +191,7 @@ const Header = () => {
                         Works
                       </a>
                     </li>
-                    <li className="menu-item">
+                    {/* <li className="menu-item">
                       <a
                         href="/#pricing-section"
                         onClick={() => linkClick()}
@@ -206,7 +206,7 @@ const Header = () => {
                       >
                         Blog
                       </a>
-                    </li>
+                    </li> */}
                     <li className="menu-item">
                       <a
                         href="/#contact-section"
@@ -215,7 +215,7 @@ const Header = () => {
                         Contact
                       </a>
                     </li>
-                    <li className="menu-item menu-item-has-children has-children">
+                    {/* <li className="menu-item menu-item-has-children has-children">
                       <a
                         className="position-relative"
                         onClick={() => setPageToggle(!pageToggle)}
@@ -278,7 +278,7 @@ const Header = () => {
                           </Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -286,7 +286,7 @@ const Header = () => {
           </div>
         </div>
         {/* social */}
-        <div className="menu-social-links">
+        {/* <div className="menu-social-links">
           <a
             href="http://dribbble.com"
             target="blank"
@@ -308,7 +308,7 @@ const Header = () => {
           >
             <i className="fab fa-behance" />
           </a>
-        </div>
+        </div> */}
       </div>
     </header>
   );

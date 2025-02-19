@@ -14,7 +14,7 @@ const Index = () => {
         <div className="container">
           {/* Hero Started */}
           <div className="hero-started">
-            {/* <div
+            <div
               className="slide"
             >
               <img src="assets/images/profile.png" alt="" />
@@ -88,7 +88,7 @@ const Index = () => {
                   />
                 </svg>
               </span>
-            </div> */}
+            </div>
             <div className="content">
               <div className="titles">
                 <div className="subtitle">Front-end Web Developer</div>

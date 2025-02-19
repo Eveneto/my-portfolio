@@ -43,8 +43,8 @@ const ProjectIsotop = () => {
           {/* Efycard */}
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-health">
             <div className="works-item">
-              <Link href="https://efycard.com.br" target="_blank" rel="noopener noreferrer">
-                <a>
+              <Link href="https://efycard.com.br" passHref>
+                <a target="_blank" rel="noopener noreferrer">
                   <span className="image">
                     <span className="img">
                       <img src="assets/images/efycard.jpg" alt="Efycard" />
@@ -63,8 +63,8 @@ const ProjectIsotop = () => {
           {/* Congresso de Cardiologia de Pernambuco */}
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-congress">
             <div className="works-item">
-              <Link href="https://sbcpe.com.br" target="_blank" rel="noopener noreferrer">
-                <a>
+              <Link href="https://sbcpe.com.br" passHref>
+                <a target="_blank" rel="noopener noreferrer">
                   <span className="image">
                     <span className="img">
                       <img src="assets/images/sbcpe.jpg" alt="Congresso de Cardiologia de Pernambuco" />
@@ -83,8 +83,8 @@ const ProjectIsotop = () => {
           {/* Boku’s */}
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-food">
             <div className="works-item">
-              <Link href="https://bokus.com.br" target="_blank" rel="noopener noreferrer">
-                <a>
+              <Link href="https://bokus.com.br" passHref>
+                <a target="_blank" rel="noopener noreferrer">
                   <span className="image">
                     <span className="img">
                       <img src="assets/images/bokus.png" alt="Boku’s" />
@@ -103,8 +103,8 @@ const ProjectIsotop = () => {
           {/* FW Máquinas */}
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-machinery">
             <div className="works-item">
-              <Link href="https://fwmaquinas.com.br" target="_blank" rel="noopener noreferrer">
-                <a>
+              <Link href="https://fwmaquinas.com.br" passHref>
+                <a target="_blank" rel="noopener noreferrer">
                   <span className="image">
                     <span className="img">
                       <img src="assets/images/fwmaquinas.jpg" alt="FW Máquinas" />
@@ -123,8 +123,8 @@ const ProjectIsotop = () => {
           {/* Rio Sol */}
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-winery">
             <div className="works-item">
-              <Link href="https://vinhosriosol.com.br" target="_blank" rel="noopener noreferrer">
-                <a>
+              <Link href="https://vinhosriosol.com.br" passHref>
+                <a target="_blank" rel="noopener noreferrer">
                   <span className="image">
                     <span className="img">
                       <img src="assets/images/riosol.jpg" alt="Rio Sol" />
