@@ -216,8 +216,8 @@ const Index = () => {
             <h2 className="m-title">My Resume</h2>
           </div>
           <div className="row row-custom">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
-            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
+            {/* <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div> */}
+            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-11 vertical-line">
               {/* About Me */}
               <div className="text">
                 <p>
@@ -276,9 +276,9 @@ const Index = () => {
                       <div className="text">
                         <p>{service.desc}</p>
                       </div>
-                      <a href="#contact-section" className="lnk">
+                      {/* <a href="#contact-section" className="lnk">
                         Order now
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 ))}
@@ -363,7 +363,7 @@ const Index = () => {
             </h2>
           </div>
           <div className="row row-custom">
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+            {/* <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div> */}
             <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 vertical-line">
               {/* Description */}
               <div

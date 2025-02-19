@@ -2051,7 +2051,7 @@ body.light-skin .header.sticky .navbar.default:before {
 	margin-top: 0;
 	margin-bottom: 40px;
 	font-family: "Sorts Mill Goudy";
-	font-size: 138px;
+	font-size: 108px;
 	line-height: 1;
 	color: #FFF;
 	font-weight: 400;
@@ -2205,7 +2205,7 @@ body.light-skin .header.sticky .navbar.default:before {
 }
 
 .hero-started .titles {
-	max-width: 570px;
+	/* max-width: 570px; */
 	z-index: 3;
 }
 
@@ -2231,7 +2231,7 @@ body.light-skin .header.sticky .navbar.default:before {
 	font-size: 22px;
 	color: #bdc1c7;
 	font-weight: 300;
-	max-width: 350px;
+	/* max-width: 350px; */
 	border-left: 1px solid #fff;
 }
 
@@ -2529,12 +2529,12 @@ body.light-skin .header.sticky .navbar.default:before {
 .history-left {
 	margin-bottom: 40px;
 	float: left;
-	width: 270px;
+	width: 370px;
 }
 
 .history-right {
 	float: right;
-	width: 270px;
+	width: 370px;
 }
 
 .history-item {

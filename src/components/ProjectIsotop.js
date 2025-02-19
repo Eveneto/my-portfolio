@@ -30,12 +30,13 @@ const ProjectIsotop = () => {
     <Fragment>
       <div className="works-box">
         <div className="filter-links">
-          <button className={`c-pointer ${activeBtn("*")}`} onClick={handleFilterKeyChange("*")}>All</button>
-          <button className={`c-pointer ${activeBtn("sorting-health")}`} onClick={handleFilterKeyChange("sorting-health")}>Health</button>
-          <button className={`c-pointer ${activeBtn("sorting-congress")}`} onClick={handleFilterKeyChange("sorting-congress")}>Congress</button>
-          <button className={`c-pointer ${activeBtn("sorting-food")}`} onClick={handleFilterKeyChange("sorting-food")}>Food</button>
-          <button className={`c-pointer ${activeBtn("sorting-machinery")}`} onClick={handleFilterKeyChange("sorting-machinery")}>Machinery</button>
-          <button className={`c-pointer ${activeBtn("sorting-winery")}`} onClick={handleFilterKeyChange("sorting-winery")}>Winery</button>
+          <a className={`c-pointer ${activeBtn("*")}`} onClick={handleFilterKeyChange("*")}>All</a>
+          <a className={`c-pointer ${activeBtn("sorting-health")}`} onClick={handleFilterKeyChange("sorting-health")}>Health</a>
+          <a className={`c-pointer ${activeBtn("sorting-congress")}`} onClick={handleFilterKeyChange("sorting-congress")}>Congress</a>
+          <a className={`c-pointer ${activeBtn("sorting-food")}`} onClick={handleFilterKeyChange("sorting-food")}>Food</a>
+          <a className={`c-pointer ${activeBtn("sorting-machinery")}`} onClick={handleFilterKeyChange("sorting-machinery")}>Machinery</a>
+          <a className={`c-pointer ${activeBtn("sorting-winery")}`} onClick={handleFilterKeyChange("sorting-winery")}>Winery</a>
+
         </div>
 
         <div className="works-items works-list-items row">
@@ -62,7 +63,7 @@ const ProjectIsotop = () => {
           {/* Congresso de Cardiologia de Pernambuco */}
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-congress">
             <div className="works-item">
-              <Link href="https://congressodecardiologia.com.br" target="_blank" rel="noopener noreferrer">
+              <Link href="https://sbcpe.com.br" target="_blank" rel="noopener noreferrer">
                 <a>
                   <span className="image">
                     <span className="img">
